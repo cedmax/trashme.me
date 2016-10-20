@@ -1,5 +1,5 @@
 import React from 'react';
-import IconButton from 'material-ui/lib/icon-button';
+import IconButton from 'material-ui/IconButton';
 import style from 'js/style';
 
 export default class Button extends React.Component {

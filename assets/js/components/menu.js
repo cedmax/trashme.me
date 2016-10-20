@@ -1,7 +1,6 @@
 import React from 'react';
-import List from 'material-ui/lib/lists/list';
-import ListItem from 'material-ui/lib/lists/list-item';
-import MenuItem from 'material-ui/lib/menus/menu-item';
+import {List, ListItem} from 'material-ui/List';
+import { MenuItem } from 'material-ui/Menu';
 import props from 'js/props';
 
 export default class NavMenu extends React.Component {

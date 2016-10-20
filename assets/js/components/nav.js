@@ -1,13 +1,13 @@
 import React from 'react';
-import AppBar from 'material-ui/lib/app-bar';
-import HelpOutlineIcon from 'material-ui/lib/svg-icons/action/help-outline';
-import MenuIcon from 'material-ui/lib/svg-icons/navigation/menu';
-import ControlPointIcon from 'material-ui/lib/svg-icons/image/control-point';
-import LeftNav from 'material-ui/lib/left-nav';
-import Dialog from 'material-ui/lib/dialog';
+import AppBar from 'material-ui/AppBar';
+import HelpOutlineIcon from 'material-ui/svg-icons/action/help-outline';
+import MenuIcon from 'material-ui/svg-icons/navigation/menu';
+import ControlPointIcon from 'material-ui/svg-icons/image/control-point';
+import LeftNav from 'material-ui/Drawer';
+import Dialog from 'material-ui/Dialog';
 import Menu from 'js/components/menu';
 import SubmitDialog from 'js/components/submit-dialog';
-import FlatButton from 'material-ui/lib/flat-button';
+import FlatButton from 'material-ui/FlatButton';
 import style from 'js/style';
 
 export default class Nav extends React.Component {

@@ -1,6 +1,6 @@
 import React from 'react';
-import IconButton from 'material-ui/lib/icon-button';
-import ContentContentCopy from 'material-ui/lib/svg-icons/content/content-copy';
+import IconButton from 'material-ui/IconButton';
+import ContentContentCopy from 'material-ui/svg-icons/content/content-copy';
 import style from 'js/style';
 
 export default class CopyButton extends React.Component {

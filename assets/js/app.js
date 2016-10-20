@@ -4,8 +4,18 @@ import HomePage from 'js/pages/home';
 import Category from 'js/pages/category';
 import QuickReplies from 'js/pages/quick-replies';
 import props from 'js/props';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 
 export default class App extends React.Component {
+  getChildContext() {
+    const config = {};
+    if (this.props.userAgent){
+      config.userAgent = this.props.userAgent;
+    }
+    return { muiTheme: getMuiTheme(baseTheme, config) };
+  }
+
   render() {
     let {
       section,
@@ -48,6 +58,10 @@ export default class App extends React.Component {
     );
   }
 }
+
+App.childContextTypes = {
+  muiTheme: React.PropTypes.object.isRequired
+};
 
 App.propTypes = {
   data: React.PropTypes.shape({

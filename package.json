@@ -16,7 +16,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "4.13.3",
-    "express-autoprefixer": "4.0.3",
     "get-youtube-id": "^1.0.0",
     "hogan-express": "0.5.2",
     "hotload": "0.0.5",
@@ -24,8 +23,8 @@
     "lodash": "^4.11.1",
     "marked": "0.3.5",
     "postcss": "^4.1.16",
-    "react": "0.14.7",
-    "react-dom": "0.14.7",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "requiredir": "^1.0.7"
   },
   "devDependencies": {
@@ -45,12 +44,12 @@
     },
     "dependencies": {
       "clipboard": "npm:clipboard@1.5.9",
-      "inline-style-prefix-all": "npm:inline-style-prefix-all@^1.0.5",
       "jsx": "github:floatdrop/plugin-jsx@1.2.1",
-      "material-ui": "npm:material-ui@0.15.0-alpha.2",
-      "react": "npm:react@0.14.7",
-      "react-router": "npm:react-router@2.0.1",
-      "react-tap-event-plugin": "github:zilverline/react-tap-event-plugin@0.2.2",
+      "material-ui": "npm:material-ui@^0.16.0",
+      "react": "npm:react@^15.3.2",
+      "react-dom": "npm:react-dom@^15.3.2",
+      "react-router": "npm:react-router@^2.8.1",
+      "react-tap-event-plugin": "npm:react-tap-event-plugin@^1.0.0",
       "react-toolbox": "github:react-toolbox/react-toolbox@0.14.2"
     },
     "devDependencies": {

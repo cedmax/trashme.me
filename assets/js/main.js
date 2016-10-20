@@ -23,6 +23,7 @@ class Main extends React.Component {
   render() {
     return (
       <App
+        userAgent={ navigator.userAgent }
         navigateTo={ navigateTo }
         data={ data }
         section={ this.props.params.section }
