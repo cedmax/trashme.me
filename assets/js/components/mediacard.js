@@ -1,13 +1,11 @@
 import React from 'react';
-import Card from 'material-ui/lib/card/card';
-import CardMedia from 'material-ui/lib/card/card-media';
-import CardTitle from 'material-ui/lib/card/card-title';
+import {Card,CardMedia, CardTitle } from 'material-ui/Card';
 import CopyButton from 'js/components/buttons/copy';
-import GifIcon from 'material-ui/lib/svg-icons/action/gif';
+import GifIcon from 'material-ui/svg-icons/action/gif';
 import Button from 'js/components/buttons/generic';
 import Link from 'js/components/link';
 import Video from 'js/components/video';
-import VideoIcon from 'material-ui/lib/svg-icons/av/videocam';
+import VideoIcon from 'material-ui/svg-icons/av/videocam';
 import style from 'js/style';
 import props from 'js/props';
 

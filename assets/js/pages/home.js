@@ -1,7 +1,5 @@
 import React from 'react';
-import Card from 'material-ui/lib/card/card';
-import CardMedia from 'material-ui/lib/card/card-media';
-import CardTitle from 'material-ui/lib/card/card-title';
+import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 import style from 'js/style';
 import props from 'js/props';
 

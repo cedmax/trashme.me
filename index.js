@@ -55,6 +55,7 @@ jspm.import( 'js/app' ).then( function( App ) {
         videoId: getYouTubeID( video[ selected ] && video[ selected ].url ),
         dev: ( settings.env === 'dev' ),
         DOM: ReactDOMServer.renderToString( App({
+          userAgent: req.headers[ 'user-agent' ],
           data,
           section,
           selected,
@@ -79,7 +80,6 @@ jspm.import( 'js/app' ).then( function( App ) {
   });
 
   app.get( '/', function( req, res ) {
-    global.navigator = { userAgent: req.headers[ 'user-agent' ] };
     var domain = req.protocol + '://' + req.get( 'host' );
 
     Object.assign( res.locals, {
@@ -90,6 +90,7 @@ jspm.import( 'js/app' ).then( function( App ) {
       dev: ( settings.env === 'dev' ),
       DOM: ReactDOMServer.renderToString( App({
         data,
+        userAgent: req.headers[ 'user-agent' ],
         navigateTo: function() {}
       }))
     });
@@ -98,8 +99,6 @@ jspm.import( 'js/app' ).then( function( App ) {
   });
 
   app.get( '/:section/:selected?/:format?', function( req, res ) {
-    global.navigator = { userAgent: req.headers[ 'user-agent' ] };
-
     const selected = req.params.selected;
     const section = req.params.section;
 
