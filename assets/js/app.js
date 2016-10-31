@@ -10,10 +10,10 @@ import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 export default class App extends React.Component {
   getChildContext() {
     const config = {};
-    if (this.props.userAgent){
+    if ( this.props.userAgent ) {
       config.userAgent = this.props.userAgent;
     }
-    return { muiTheme: getMuiTheme(baseTheme, config) };
+    return { muiTheme: getMuiTheme( baseTheme, config ) };
   }
 
   render() {
@@ -67,6 +67,7 @@ App.propTypes = {
   data: React.PropTypes.shape({
     categories: React.PropTypes.objectOf( props.section ).isRequired
   }).isRequired,
+  userAgent: React.PropTypes.string,
   navigateTo: React.PropTypes.func.isRequired,
   section: React.PropTypes.string
 };
