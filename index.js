@@ -98,6 +98,10 @@ jspm.import( 'js/app' ).then( function( App ) {
     res.render( 'index' );
   });
 
+  app.get( '/app', function( req, res) {
+    res.render('app.html');
+  });
+  
   app.get( '/:section/:selected?/:format?', function( req, res ) {
     const selected = req.params.selected;
     const section = req.params.section;
