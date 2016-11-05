@@ -1,6 +1,6 @@
 {
-  "name": "boris",
-  "version": "0.0.0",
+  "name": "TrashMe.me",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "validate": "jsonlint data/*.json --quiet && eslint ./*.js assets/js",
     "test": "npm run fix && npm run validate",
     "test-all": "npm test && node scripts/test-content",
-    "bundle": "jspm bundle-sfx -m js/main assets/bundle.js"
+    "bundle": "rm assets/bundle.*.js && jspm bundle-sfx -m js/main assets/bundle.js && node scripts/version.js"
   },
   "author": "",
   "license": "ISC",
@@ -35,6 +35,8 @@
     "eslint-plugin-react": "2.7.1",
     "jscs": "^3.0.3",
     "jsonlint": "1.6.2",
+    "md5-file": "^3.1.1",
+    "replace-in-file": "^2.0.1",
     "request": "^2.70.0",
     "sort-json": "^1.2.0"
   },
