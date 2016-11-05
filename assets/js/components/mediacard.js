@@ -6,6 +6,7 @@ import Button from 'js/components/buttons/generic';
 import Link from 'js/components/link';
 import Video from 'js/components/video';
 import VideoIcon from 'material-ui/svg-icons/av/videocam';
+import GoogleAd from 'react-google-ad';
 import style from 'js/style';
 import props from 'js/props';
 
@@ -102,16 +103,21 @@ export default class MediaCard extends React.Component {
     );
 
     return (
-      <Card
-        style={ style.mediaCard.container }
-      >
-        <CardMedia>
-          { media }
-        </CardMedia>
-        <CardTitle
-          subtitle={ subtitle }
-        />
-      </Card>
+      <div style={ style.mediaCard.container }>
+        <Card>
+          <CardMedia>
+            { media }
+          </CardMedia>
+          <CardTitle
+            subtitle={ subtitle }
+          />
+        </Card>
+      
+        <GoogleAd
+          client="ca-pub-1813941055834738"
+          slot="7548278009"
+          format="auto" />
+      </div>
     );
   }
 }
