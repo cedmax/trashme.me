@@ -6,7 +6,6 @@ import Button from 'js/components/buttons/generic';
 import Link from 'js/components/link';
 import Video from 'js/components/video';
 import VideoIcon from 'material-ui/svg-icons/av/videocam';
-import GoogleAd from 'react-google-ad';
 import style from 'js/style';
 import props from 'js/props';
 
@@ -49,11 +48,7 @@ export default class MediaCard extends React.Component {
       url,
       gif,
       title
-    } = currentVideo || {};
-
-    if ( !url ) {
-      return ( <div /> );
-    }
+    } = currentVideo;
 
     let alternateButton;
     let media = ( <Video videoUrl={url} /> );
@@ -112,11 +107,6 @@ export default class MediaCard extends React.Component {
             subtitle={ subtitle }
           />
         </Card>
-      
-        <GoogleAd
-          client="ca-pub-1813941055834738"
-          slot="7548278009"
-          format="auto" />
       </div>
     );
   }
@@ -124,7 +114,7 @@ export default class MediaCard extends React.Component {
 
 MediaCard.propTypes = {
   title: React.PropTypes.string,
-  currentVideo: props.video,
+  currentVideo: props.video.isRequired,
   selected: React.PropTypes.string,
   onCopyReady: React.PropTypes.func.isRequired
 };

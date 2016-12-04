@@ -24,7 +24,6 @@ System.config({
     "material-ui": "npm:material-ui@0.16.0",
     "react": "npm:react@15.3.2",
     "react-dom": "npm:react-dom@15.3.2",
-    "react-google-ad": "npm:react-google-ad@1.0.2",
     "react-router": "npm:react-router@2.8.1",
     "react-tap-event-plugin": "npm:react-tap-event-plugin@1.0.0",
     "react-toolbox": "github:react-toolbox/react-toolbox@0.14.2",
@@ -571,9 +570,6 @@ System.config({
     },
     "npm:react-event-listener@0.3.1": {
       "react-addons-shallow-compare": "npm:react-addons-shallow-compare@15.3.2"
-    },
-    "npm:react-google-ad@1.0.2": {
-      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:react-router@2.8.1": {
       "history": "npm:history@2.1.2",
