@@ -1,7 +1,5 @@
 import React from 'react';
-import Container from 'js/components/container';
-import AutoComplete from 'js/components/autocomplete';
-import MediaCard from 'js/components/mediacard';
+import CategoryBody from 'js/components/category-body';
 import style from 'js/style';
 import props from 'js/props';
 
@@ -15,22 +13,17 @@ export default class QuickReplies extends React.Component {
       videos
     } = data.r;
     const currentVideo = selected ? videos[ selected ] : null;
+
     return (
       <div
         style={ Object.assign({}, style.pages.quickReplies.container, {
           'background': `url(/img/${currentVideo && currentVideo.category || 'r'}.jpg) no-repeat 50% calc(50% + 70px) / cover`
         }) }
       >
-        <Container>
-          <AutoComplete
-            { ...this.props }
-            value={ currentVideo && currentVideo.title }
-            options={ videos }
-          />
-        </Container>
-        <MediaCard
+        <CategoryBody
           { ...this.props }
           currentVideo={ currentVideo }
+          videos={ videos }
         />
       </div>
     );
