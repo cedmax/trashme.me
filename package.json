@@ -10,7 +10,9 @@
     "validate": "jsonlint data/*.json --quiet && eslint ./*.js assets/js",
     "test": "npm run fix && npm run validate",
     "test-all": "npm test && node scripts/test-content",
-    "bundle": "rm assets/bundle.*.js && jspm bundle-sfx -m js/main assets/bundle.js && node scripts/version.js"
+    "bundle": "rm assets/bundle.*.js && jspm bundle-sfx -m js/main assets/bundle.js && node scripts/version.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -25,7 +27,8 @@
     "postcss": "^4.1.16",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "requiredir": "^1.0.7"
+    "requiredir": "^1.0.7",
+    "snyk": "^1.47.0"
   },
   "devDependencies": {
     "autoprefixer": "^5.2.0",
@@ -59,5 +62,6 @@
       "babel-runtime": "npm:babel-runtime@5.8.24",
       "core-js": "npm:core-js@1.1.4"
     }
-  }
+  },
+  "snyk": true
 }
